@@ -1,0 +1,41 @@
+
+<head>
+  <title>Todo List</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form>
+    </header>
+ 
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+  </div>
+  <script>
+      function har() {
+          var poop = confirm("JT has grapes for ballz.  if u agree u can use my app.  KEEP SLAYIN' BOIIII");
+          if (poop === false) {
+              window.location.assign('https://www.youtube.com/watch?v=SIaFtAKnqBU');
+          }
+          }
+      har();
+  </script>
+</body>
+
+<template name="task">
+    <li class="{{#if checked}}checked{{/if}}">
+        <button class="delete">&times;</button>
+
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+        <span class="text">{{text}}</span>
+    </li>
+</template>
