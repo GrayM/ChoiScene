@@ -4,18 +4,18 @@
 </head>
  
 <body bgcolor="#4000FF">
-  <div class="container" style="background-color: #4000FF">
-    <header style="background-color: #4000FF">
-      <h1 align="middle" style="color: white; background-color: #4000FF;">ChoiScene</h1>
+  <div class="container">
+    <header>
+      <h1 align="middle">ChoiScene</h1>
         {{>loginButtons}}
         {{#if currentUser}}
-          <form class="new-task" style="background-color: #4000FF">
+          <form class="new-task">
             <input type="text" name="text" placeholder="Type to add new tasks" />
           </form>
         {{/if}}
     </header>
  
-    <ul style="background-color: #4000FF">
+    <ul>
       {{#each tasks}}
         {{> task}}
       {{/each}}
@@ -33,7 +33,7 @@
   </script>
 </body>
 
-<template name="task" style="background-color: #4000FF">
+<template name="task" class="template">
     <li class="{{#if checked}}checked{{/if}}">
         <button class="delete">&times;</button>
 

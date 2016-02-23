@@ -3,7 +3,6 @@ body {
   background-color: #315481;
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
   background-attachment: fixed;
-
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,12 +14,20 @@ body {
 
   font-size: 14px;
 }
-
+body img {
+  max-width:500px;
+}
+h1 {
+  text-align:middle;background-color: #4000FF;
+  color: white; 
+  background-color: #4000FF;
+}
 .container {
   max-width: 600px;
   margin: 0 auto;
   min-height: 100%;
   background: white;
+  background-color: #4000FF;
 }
 
 header {
@@ -28,6 +35,7 @@ header {
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
+  background-color: #4000FF;
 }
 
 #login-buttons {
@@ -47,7 +55,9 @@ form {
   margin-bottom: -10px;
   position: relative;
 }
-
+.new-task {
+  background-color: #4000FF
+}
 .new-task input {
   box-sizing: border-box;
   padding: 10px 0;
@@ -61,11 +71,14 @@ form {
 .new-task input:focus{
   outline: 0;
 }
-
+.template {
+  background-color: #4000FF;
+}
 ul {
   margin: 0;
   padding: 0;
   background: white;
+  background-color: #4000FF;
 }
 
 .delete {
