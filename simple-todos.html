@@ -1,0 +1,44 @@
+
+<head>
+  <title>ChoiScene POC</title>
+</head>
+ 
+<body bgcolor="#4000FF">
+  <div class="container" style="background-color: #4000FF">
+    <header style="background-color: #4000FF">
+      <h1 align="middle" style="color: white; background-color: #4000FF;">ChoiScene</h1>
+        {{>loginButtons}}
+        {{#if currentUser}}
+          <form class="new-task" style="background-color: #4000FF">
+            <input type="text" name="text" placeholder="Type to add new tasks" />
+          </form>
+        {{/if}}
+    </header>
+ 
+    <ul style="background-color: #4000FF">
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+      <img src="./images/blurcar.jpg" align="middle">
+  </div>
+  <script>
+      /**function har() {
+          var poop = confirm("JT has grapes for ballz.  if u agree u can use my app.  KEEP SLAYIN' BOIIII");
+          if (poop === false) {
+              window.location.assign('https://www.youtube.com/watch?v=SIaFtAKnqBU');
+          }
+          }
+      har();**/
+  </script>
+</body>
+
+<template name="task" style="background-color: #4000FF">
+    <li class="{{#if checked}}checked{{/if}}">
+        <button class="delete">&times;</button>
+
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+        <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+    </li>
+</template>
